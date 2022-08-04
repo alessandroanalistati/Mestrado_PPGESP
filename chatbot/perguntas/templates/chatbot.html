@@ -77,7 +77,7 @@
 			top: 0px;
 			bottom: auto;
 			border: 20px solid;
-			border-color: #8000ff transparent transparent transparent;
+			border-color: #00FF80 transparent transparent transparent;
 		}
 
 		.talktext {
@@ -107,7 +107,7 @@
 			<div class="talk-bubble tri-right left-top"
 			style="width: 90%; background-color: #00aabb;">
 				<div class="talktext">
-					<p>Olá! Eu sou *ZAREK* 😉, Assistente Virtual do curso de Matemática do IFBA-Campus Eunápolis. Como posso lhe ajudar?</p>
+					<p>🤖 Olá! Eu sou *ZAREK* 😉, Assistente Virtual do curso de Matemática do IFBA-Campus Eunápolis. Como posso lhe ajudar?</p>
 				</div>
 			</div>
 		</div>
@@ -116,23 +116,24 @@
 	</div>
 	<input type="hidden" id="code_user" value="{{code_user}}">
 	<input type="hidden" id="code_before" value="0">
-
+	
 	<script type="text/javascript">
 		function Send(e) {
-			if(e.keyCode == 13) {
+			if(e.keyCode == 13) { // 13 é o codigo da tecla enter 
 				perguntar();
 				return false;	
 			}
-		}
-
+		}		
 		function perguntar() {
 			const Input = document.getElementById('input');
 			const question = Input.value.toString().trim();
-			// remove acentos
+			// expressão regular
+			// remove acentos do que foi digitado
 			let questionSEND = question.normalize('NFD').replace(/[\u0300-\u036f]/g, '');
-			// remove caracteres não alfanuméricos
+			// remove caracteres não alfanuméricos ou especiais, qualquer coisa difirente de ^a-zA-Z0-9@,.;:!-\s sera substituido por vazio
 			questionSEND = questionSEND.replace(/[^a-zA-Z0-9@,.;:!-\s]/g, '');
 
+			// Conteudo do balão 
 			const msg = document.getElementById('msg');
 			const code_user = document.getElementById('code_user');
 			const code_before = document.getElementById('code_before');

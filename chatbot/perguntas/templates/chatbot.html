@@ -105,9 +105,9 @@
 	<div>
 		<div style="overflow-y: scroll; height: 300px; width: 100%;" align="center" id="msg">
 			<div class="talk-bubble tri-right left-top"
-			style="width: 90%; background-color: #00aabb;">
+			style="width: 90%; background-color: #3CB371;">
 				<div class="talktext">
-					<p>🤖 Olá! Eu sou *ZAREK* 😉, Assistente Virtual do curso de Matemática do IFBA-Campus Eunápolis. Como posso lhe ajudar?</p>
+					<p>🤖 Olá! Eu sou <strong>ZAREK - </strong>😉, Assistente Virtual do curso de Matemática do IFBA-Campus Eunápolis. Como posso lhe ajudar?</p>
 				</div>
 			</div>
 		</div>
@@ -115,8 +115,7 @@
 		onkeypress="return Send(event)" placeholder="Digite a sua mensagem e tecle Enter...">
 	</div>
 	<input type="hidden" id="code_user" value="{{code_user}}">
-	<input type="hidden" id="code_before" value="0">
-	
+	<input type="hidden" id="code_before" value="0">	
 	<script type="text/javascript">
 		function Send(e) {
 			if(e.keyCode == 13) { // 13 é o codigo da tecla enter 
@@ -166,7 +165,7 @@
 						</div>
 
 						<div class="talk-bubble tri-right left-top"
-						style="width: 90%; background-color: #00aabb;">
+						style="width: 90%; background-color: #3CB371;">
 							<div class="talktext">
 								<p>${output}</p>
 							</div>

@@ -6,6 +6,7 @@ from unidecode import unidecode
 from capturas.models import Captura
 from usuarios.models import Usuario
 
+
 codeUser = 0
 
 # Create your views here.
@@ -213,7 +214,7 @@ def questao(request, code_user, code_before, question):
 	estado = ''
 	cidade = ''
 	tokens = qTemp.split(' ')
-	import buscacep
+	
 	for token in tokens:
 		parts = re.sub('[^0-9]', '', token)
 		if len(parts) == 8:

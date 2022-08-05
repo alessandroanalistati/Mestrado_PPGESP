@@ -55,45 +55,34 @@
 						<th>Sexo</th>
 						<th>E-Mail</th>
 						<th>Celular</th>
-						<th>Tel-Fixo</th>
+						<th>Telefone</th>
 						<th>CEP</th>
 						<th>Cidade</th>
 						<th>UF</th>
 						<th>Bairro</th>
 						<th>Endereço</th>
 						<th>Número</th>
-						<th>Nomedo Curso</th>
-						<th>Ano Inicio do Curso</th>
-						<th>Simestre Atual </th>
-						<th>Ensino médio em escola pública?</th>
-						<th>Trabalha?</th>
-						<th>Tem Filhos?</th>
-						<th>Possui Notebook?</th>
-						<th>Observações</th>
+						<th>CPF</th>
+						<th>CNPJ</th>
 					</tr>
 				</thead>
 				<tbody>
 					{% for captura in capturas %}
 					<tr>
 						<td nowrap="true">{{captura.name}}</td>
-						<td nowrap="true">{{captura.idade}}</td>
-						<td nowrap="true">{{captura.sexo}}</td>
+						<td nowrap="true">{{captura.age}}</td>
+						<td nowrap="true">{{captura.sex}}</td>
 						<td nowrap="true">{{captura.email}}</td>
-						<td nowrap="true">{{captura.cel}}</td>
-						<td nowrap="true">{{captura.telfixo}}</td>
+						<td nowrap="true">{{captura.cellphone}}</td>
+						<td nowrap="true">{{captura.phone}}</td>
 						<td nowrap="true">{{captura.cep}}</td>
-						<td nowrap="true">{{captura.cidade}}</td>
-						<td nowrap="true">{{captura.bairro}}</td>
-						<td nowrap="true">{{captura.endereco}}</td>
-						<td nowrap="true">{{captura.numero}}</td>
-						<td nowrap="true">{{captura.nomecurso}}</td>
-						<td nowrap="true">{{captura.iniciocursoano}}</td>
-						<td nowrap="true">{{captura.simestreatual}}</td>
-						<td nowrap="true">{{captura.ensino_medio}}</td>
-						<td nowrap="true">{{captura.trabalha}}</td>
-						<td nowrap="true">{{captura.filhos}}</td>
-						<td nowrap="true">{{captura.possuinotbook}}</td>
-						<td nowrap="true">{{captura.obs}}</td>						
+						<td nowrap="true">{{captura.city}}</td>
+						<td nowrap="true">{{captura.state}}</td>
+						<td nowrap="true">{{captura.neighborhood}}</td>
+						<td nowrap="true">{{captura.address}}</td>
+						<td nowrap="true">{{captura.number}}</td>
+						<td nowrap="true">{{captura.cpf}}</td>
+						<td nowrap="true">{{captura.cnpj}}</td>
 					</tr>
 					{% endfor %}
 				</tbody>
